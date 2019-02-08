@@ -3,6 +3,7 @@
 Sample C# console app for adding a group to a area path and giving the group read/write perms to the work items in the area path.
 
 .\AreaPathSecuritySample.exe --help
+
 AreaPathSecuritySample 1.0.0.0
 Copyright c  2019
 
