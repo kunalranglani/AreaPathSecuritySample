@@ -2,9 +2,8 @@
 
 Sample C# console app for adding a group to a area path and giving the group read/write perms to the work items in the area path.
 
+```bash
 .\AreaPathSecuritySample.exe --help
-AreaPathSecuritySample 1.0.0.0
-Copyright c  2019
 
   -a, --account    Required. The url of the Azure Devops account like https://dev.azure.com/fabrikam
 
@@ -19,3 +18,4 @@ Copyright c  2019
   --version        Display version information.
 
 Usage: AreaPathSecuritySample.exe -a yourAccountUrl -p yourPojectName -c yourAreaPathName -g yourGroupName
+```
