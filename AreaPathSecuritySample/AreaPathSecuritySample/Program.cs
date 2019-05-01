@@ -59,7 +59,8 @@ namespace AreaPathSecuritySample
             // Get the acls for the area path
             SecurityHttpClient securityClient = connection.GetClient<SecurityHttpClient>();
             IEnumerable<AccessControlList> acls = securityClient.QueryAccessControlListsAsync(securityNamespaceId, null, null, false, false).Result;
-            AccessControlList areaPathAcl = acls.FirstOrDefault(x => x.Token.Contains(areaPath.Identifier.ToString()));
+
+            AccessControlList areaPathAcl = acls.FirstOrDefault(x => x.Token.EndsWith(areaPath.Identifier.ToString()));
 
             // Add group to the area path security with read/write perms for work items in this area path
             AccessControlEntry entry = new AccessControlEntry(group.Descriptor, 48, 0, null);
